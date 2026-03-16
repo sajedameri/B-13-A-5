@@ -8,7 +8,116 @@
    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-  
-</body>
+
+
+ <body class="bg-gray-100">
+
+<!-- Navbar -->
+
+<div class="bg-white shadow p-4 flex justify-between items-center">
+
+<h1 class="font-bold text-lg">GitHub Issues Tracker</h1>
+
+<div class="flex gap-2">
+
+<input id="searchInput"
+class="border px-3 py-1 rounded"
+placeholder="Search issue">
+
+<button onclick="searchIssue()"
+class="bg-purple-600 text-white px-3 py-1 rounded">
+Search
+</button>
+
+</div>
+
+</div>
+
+<!-- Tabs -->
+
+<div class="max-w-6xl mx-auto mt-6">
+
+<div class="flex gap-3 mb-3">
+
+<button id="allBtn"
+onclick="loadIssues('all')"
+class="tabBtn bg-purple-600 text-white px-4 py-1 rounded">
+All
+</button>
+
+<button id="openBtn"
+onclick="loadIssues('open')"
+class="tabBtn bg-gray-200 px-4 py-1 rounded">
+Open
+</button>
+
+<button id="closedBtn"
+onclick="loadIssues('closed')"
+class="tabBtn bg-gray-200 px-4 py-1 rounded">
+Closed
+</button>
+
+</div>
+
+<!-- Issue info -->
+
+<div class="flex justify-between text-sm mb-4">
+
+<div>
+📌 <span id="issueCount">0</span> Issues
+</div>
+
+<div class="flex gap-4">
+  <img src="./assets/Open-Status.png" alt="">
+  <h2 class="text-xl">open</h2>
+
+
+  <img src="./assets/Closed- Status .png" alt="">
+  <h2 class="text-xl">closed</h2>
+</div>
+
+</div>
+
+<!-- Cards -->
+
+<div id="issuesContainer"
+class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+</div>
+
+</div>
+
+<!-- Modal -->
+
+<div id="modal"
+class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+
+<div class="bg-white p-6 w-96 rounded">
+
+<h2 id="modalTitle" class="font-bold text-lg mb-2"></h2>
+
+<p id="modalDesc" class="text-gray-600"></p>
+
+<p id="modalAuthor"></p>
+
+<p id="modalPriority"></p>
+
+<p id="modalLabel"></p>
+
+<p id="modalDate"></p>
+
+<button onclick="closeModal()"
+class="bg-purple-600 text-white px-4 py-1 mt-3 rounded">
+Close
+</button>
+
+</div>
+
+</div>
+
+<script src="./matn.js"></script>
+
+</body> 
+
+ 
 </html>
