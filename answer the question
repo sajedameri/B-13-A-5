@@ -1,0 +1,52 @@
+
+
+
+1. Difference between var, let and const
+
+var, let and const are used to declare variables in JavaScript.
+
+var is function scoped and can be redeclared.
+
+let is block scoped and cannot be redeclared in the same scope.
+
+const is also block scoped but its value cannot be reassigned.
+
+
+2. What is the spread operator (...)
+
+Spread operator (...) is used to expand or copy elements from arrays or objects.
+
+Example:
+
+const arr = [1,2,3]
+const newArr = [...arr,4]
+
+
+3. Difference between map(), filter() and forEach()
+
+map() creates a new array by applying a function to every element.
+
+filter() creates a new array with elements that match a condition.
+
+forEach() only loops through the array but does not return a new array.
+
+
+4. What is an arrow function?
+
+Arrow function is a shorter syntax for writing functions in JavaScript.
+
+Example:
+
+const add = (a,b) => {
+  return a + b
+}
+
+
+5. What are template literals?
+
+Template literals are used to create dynamic strings using backticks.
+
+Example:
+
+const name = "Sajeda"
+console.log(`Hello ${name}`)
