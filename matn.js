@@ -1,4 +1,23 @@
-const container=document.getElementById("issuesContainer")
+
+function login(){
+
+const user=document.getElementById("username").value
+const pass=document.getElementById("password").value
+
+if(user==="admin" && pass==="admin123"){
+window.location.href="dashboard.html"
+}
+else{
+alert("Invalid Credentials")
+}
+
+}
+
+
+
+  const container=document.getElementById("issuesContainer")
+
+
 
 async function loadIssues(type){
 
